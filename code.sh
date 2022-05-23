@@ -10,5 +10,4 @@ read city
 
 #fullName="Mayank Singh"
 
-echo $fullName
-echo $city
+
