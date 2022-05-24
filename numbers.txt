@@ -1,12 +1,13 @@
 #!/bin/bash -x
 
-read -p "enter to print table": n
-base=2;
-val=$(( 2**n ))
-for(( i=1; i<$(( $val/2 )); i++ ))
+read -p "enter a number to check": n
+for(( i=2; i<=num; i++))
 do
-  sum=$(( $base*$i ))
-  echo $sum;
+   while [ $(($num%$1)) -eq 0 ]
+   do
+      num=$(($num/$i))
+      echo "$i"
+   done
 done
 
 
