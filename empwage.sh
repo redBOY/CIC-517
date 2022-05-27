@@ -26,3 +26,8 @@ function getWrkHrs() {
    esac
    echo $empHrs
 }
+
+function getEmpwage() {
+	local empHrs=$1
+	echo $(( $empHrs*$dailyWagePerHrs ))
+}
