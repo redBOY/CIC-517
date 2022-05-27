@@ -11,6 +11,10 @@ maxHrsInMonth=20
 totalWrkDays=0
 totalEmpHrs=0
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> secondbranch
 declare -A dailywage
 
 function getWrkHrs() {
@@ -30,6 +34,7 @@ function getEmpwage() {
 	local empHrs=$1
 	echo $(( $empHrs*$dailyWagePerHrs ))
 }
+<<<<<<< HEAD
 
 while [[ $totalWrkDays -lt $numOfDays && $totalEmpHrs -lt  $maxHrsInMonth ]]
 do
@@ -39,3 +44,10 @@ do
    totalEmpHrs=$(( $totalEmpHrs + $empHrs ))
 	dailywage["day"$totalWrkDays]="$( getEmpwage $empHrs )"
 done
+=======
+>>>>>>> secondbranch
+
+totalSalary=$(( $totalEmpHrs*$dailyWagePerHrs ))
+   echo $totalSalary
+	echo ${dailywage[@]}
+	echo ${!dailywage[@]}
